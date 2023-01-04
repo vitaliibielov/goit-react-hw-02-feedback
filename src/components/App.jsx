@@ -33,11 +33,13 @@ export class App extends Component {
     console.log(this.state);
     return (
       <>
-        <Section title="">
+        <Section title="Please, leave feedback">
           <FeedbackOptions
             options={Object.keys(this.state)}
             onLeaveFeedback={this.onLeaveFeedback}
           />
+        </Section>
+        <Section title="Statistics">
           {total > 0 ? (
             <Statistics
               good={this.state.good}
